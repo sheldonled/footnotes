@@ -1,0 +1,213 @@
+/* 
+    Document   : footnotes
+    Created on : 05/08/2013, 21:13:28
+    Author     : sheldonled
+    Description:
+        CSS for Foot Notes and the demonstration page.
+*/
+
+/********************************************************************
+RESETING STYLES
+*********************************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    line-height: 50px;
+    border-bottom: 2px dashed #333;
+}
+
+h3 {
+    font-size: 1.8em;
+    text-align: center;
+    line-height: 45px;
+    border-bottom: 2px dashed #CCC;
+}
+
+h4 {
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+h3 a, h3 a:hover, h2 a, h2 a:hover {
+    border-bottom: 0;
+}
+strong {
+    font-weight: bold;
+}
+/********************************************************************
+GENERAL STYLES
+*********************************************************************/
+body {
+	font-family: Arial, sans-serif;
+	font-size: 1em;
+        line-height: 1.2em;
+	margin: 0;
+	padding: 0;
+	color: #555;
+	background: #fbfbfb;
+}
+.container {
+    max-width: 940px;
+    margin: 10px auto;
+    padding: 0 10px;
+}
+
+a{
+    color:#700000;
+    -webkit-transition: border-bottom .6s linear;
+    -moz-transition: border-bottom .6s linear;
+    -o-transition: border-bottom .6s linear;
+    transition: border-bottom .6s linear;
+    text-decoration: none;
+    border-bottom: 2px dashed transparent;
+}
+
+a:visited{
+    color:#700000;
+}
+
+a:focus,a:hover,a:active{
+    border-bottom: 2px dashed #000;
+}
+
+a.notransition, a.notransition:hover {
+    border-bottom: 0;
+    display: block;
+}
+
+.clear {
+    clear: both;
+}
+
+.maintitle {
+    font-size: 5em;
+    text-align: center;
+    line-height: 3em;
+    color: #CCC;
+    text-shadow: 0 0 10px #333, 
+                 0 -5px 10px #333,
+                 0 5px 10px #333;
+}
+
+.text-right {
+    text-align: right;
+}
+/********************************************************************
+FOOTER NOTES
+*********************************************************************/
+a[rel="ftnote"] {
+    color:#700000;
+}
+a[rel="ftnote"]:hover {
+    border-bottom: 2px dashed #700000;
+}
+.footnotes {
+ 	font-size: 1em;
+	line-height: 1.6em;
+        display: none;
+}
+
+.footnotes p {
+	display: inline;
+}
+
+.footnotes hr {
+	border: none;
+	height: 1px;
+	background: #dadada;
+}
+
+.footnoteContent {
+	background: #222;
+	color: #fff;
+	display: none;
+	padding: 0 10px 30px;
+	-webkit-font-smoothing: antialiased;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: auto;
+	margin: 0;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	max-height: 100%;
+	-webkit-overflow-scrolling: touch;
+	z-index: 1000;
+}
+
+.footnoteContent code {
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+.footnoteContent a {
+	color: #FF3300;
+}
+
+.closeFootnote {
+    text-align: right;
+    display: block;
+    border-bottom: 2px dashed #FF3300;
+    font-size: 2em;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #700000;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.closeFootnote:hover {
+    border-bottom: 2px dashed #600000;
+}
