@@ -166,6 +166,11 @@ a[rel="ftnote"]:hover {
 	background: #dadada;
 }
 
+.footnoteContent strong {
+position: absolute;
+top: 10px;
+}
+
 .footnoteContent {
 	background: #222;
 	color: #fff;
