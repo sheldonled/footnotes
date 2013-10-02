@@ -360,6 +360,9 @@ Full-Width Styles
   background: #f2f2f2;
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
+  width: 80%;
+  padding: 20px 10%;
+  margin: 0 auto;
 }
 
 #main_content {
@@ -424,4 +427,92 @@ Small Device Styles
     font-size: 11px;
   }
 
+}
+
+/********************************************************************
+-------------------------FOOTER NOTES--------------------------------
+These things below are the code necessary to get footnotes working in 
+your website.
+*********************************************************************/
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+.noted {
+    position: relative;
+    z-index: 9999;
+    background-color: #FFF;
+}
+a[rel="ftnote"]:hover {
+    border-bottom: 2px dashed #700000;
+}
+.footnotes {
+  font-size: 1em;
+  line-height: 1.6em;
+        display: none;
+}
+
+.footnotes p {
+  display: inline;
+}
+
+.footnotes hr {
+  border: none;
+  height: 1px;
+  background: #dadada;
+}
+
+.footnoteContent strong {
+    position: absolute;
+    top: 10px;
+}
+
+.footnoteContent {
+  background: #222;
+  color: #fff;
+  display: none;
+  padding: 0 10px 30px;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+  margin: 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  -webkit-overflow-scrolling: touch;
+    z-index: 9999;
+}
+
+.footnoteContent code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.footnoteContent a {
+  color: #FF3300;
+}
+
+.closeFootnote {
+    text-align: right;
+    display: block;
+    border-bottom: 2px dashed #FF3300;
+    font-size: 2em;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #700000;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.closeFootnote:hover {
+    border-bottom: 2px dashed #600000;
 }
