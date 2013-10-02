@@ -1,22 +1,22 @@
 /* 
     Document   : footnotes
-    Created on : 05/08/2013, 21:13:28
+    Created on : 05/08/2013
     Author     : sheldonled
     Description:
         CSS for Foot Notes and the demonstration page.
 */
 
 /********************************************************************
-RESETING STYLES
+-------------------------RESETING STYLES-----------------------------
+Maybe you'll need some reset styles, so take it for you :D
 *********************************************************************/
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, blockquote,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+dl, dt, dd, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
@@ -37,9 +37,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
 blockquote, q {
 	quotes: none;
 }
@@ -58,10 +55,13 @@ p {
     line-height: 20px;
 }
 
-h2 {
+h1 {
     font-size: 2em;
     line-height: 50px;
-    border-bottom: 2px dashed #333;
+}
+h2 {
+    font-size: 1.5em;
+    line-height: 40px;
 }
 
 h3 {
@@ -84,7 +84,8 @@ strong {
     font-weight: bold;
 }
 /********************************************************************
-GENERAL STYLES
+-----------------------------GENERAL STYLES--------------------------
+This is needed just to render a nice demo in index.html o.O
 *********************************************************************/
 body {
 	font-family: Arial, sans-serif;
@@ -131,7 +132,7 @@ a.notransition, a.notransition:hover {
 .maintitle {
     font-size: 5em;
     text-align: center;
-    line-height: 3em;
+    line-height: 1em;
     color: #CCC;
     text-shadow: 0 0 10px #333, 
                  0 -5px 10px #333,
@@ -141,9 +142,25 @@ a.notransition, a.notransition:hover {
 .text-right {
     text-align: right;
 }
+
 /********************************************************************
-FOOTER NOTES
+-------------------------FOOTER NOTES--------------------------------
+These things below are the code necessary to get footnotes working in 
+your website.
 *********************************************************************/
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}
+.noted {
+    position: relative;
+    z-index: 9999;
+    background-color: #FFF;
+}
 a[rel="ftnote"] {
     color:#700000;
 }
@@ -167,8 +184,8 @@ a[rel="ftnote"]:hover {
 }
 
 .footnoteContent strong {
-position: absolute;
-top: 10px;
+    position: absolute;
+    top: 10px;
 }
 
 .footnoteContent {
@@ -188,7 +205,7 @@ top: 10px;
 	bottom: 0;
 	max-height: 100%;
 	-webkit-overflow-scrolling: touch;
-	z-index: 1000;
+    z-index: 9999;
 }
 
 .footnoteContent code {

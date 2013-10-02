@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Foot Notes 0.1</title>
+        <title>Foot Notes 1.0</title>
 	<!-- Meta -->
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -22,31 +22,68 @@
 	<script src="js/footnotes.js"></script>
     </head>
     <body>
+        <div id="mask"></div>  
         <section id="main">
             <div class="container">
                 <p class="maintitle">
-                    Foot Notes 0.1
+                    Foot Notes 1.0
                 </p>
+                <h1>About</h1>
                 <p>
-                    Foot Notes is a piece of Javascript (jQuery) HTML and CSS code,
+                    Foot Notes is a piece of Javascript (jQuery) CSS code,
                     that give links a good feature that, when you <a href='#fn:1' rel='ftnote'>click on</a>
                     it shows up a box with featured information about the link.
                     It is a plus for User Experience and makes your site more beauty.
                 </p>
+                <h2>How to use it?</h2>
+                <ul>
+                    <li>Make sure your website have jQuery.</li>
+                    <li><a href="https://github.com/sheldonled/footnotes" >Download the code</a></li>
+                    <li><a href="js/footnotes.js">Copy and link footnotes.js</a></li>
+                    <li><a href="css/footnotes.css">Copy and link footnotes.css</a></li>
+                    <li>Now, to make a Foot Note, just:
+                        <ul>
+                            <li>put this code in your HTML</li>
+                                <pre>
+                                    &lt;div id="mask"&gt;&lt;/div&gt; 
+                                </pre>
+                            <li>Write a link like this: 
+                                <pre>
+                                    &lt;a href='#fn:1' rel='ftnote'&gt; Text Inside &lt;/a&gt; 
+                                </pre>
+                            </li>
+                            <li>And now you have to write a code like this:
+                                <pre>
+                                    &lt;div class='footnotes'&gt;
+                                        &lt;hr /&gt;
+                                        &lt;ol&gt;
+                                            &lt;li id='fn:1'&gt;
+                                                &lt;p&gt;&lt;strong&gt;Foot Notes&lt;/strong&gt;
+                                                    When you click on a link the information shows up in a 
+                                                    box like this :D
+                                                &lt;/p&gt;
+                                            &lt;/li&gt;
+                                        &lt;/ol&gt;
+                                    &lt;/div&gt;
+                                </pre>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        The 1 in #fn:1, is a counting of references, starting
+                        with 1 to N references. So down in your HTML document, put a div with
+                        "footnotes" class, an then an &lt;ol&gt; list. You can see the HTML source code of this page,
+                        to get a real example.
+                    </li>
+                </ul>
+
+                <h2>Feed Back</h2>
                 <p>
-                    The development of this tool ocurred this way:
-                    <a href='#fn:2' rel='ftnote'>Sheldon Led</a> saw this feature in
-                    <a href='#fn:3' rel='ftnote'>Zeno Rocha's website</a> and liked it.
-                    So he got the code and adapted for his own <a target="_blank" href='http://sheldonled.com'>website</a>.
-                    After this he put the code on <a href="https://github.com/sheldonled/footnotes">github</a>.
+                    You liked it? This tool was developed by
+                    <a href='#fn:2' rel='ftnote'>Sheldon Led</a> and is completely Open Source, to get
+                    envolved just go to <a href="https://github.com/sheldonled/footnotes">Github page of footnote</a>, and fork the project.
                 </p>
-                <p>
-                    All you have to do is set up the Javascript and CSS code, so when you want a foot note link,
-                    just put &lt;a href='#fn:1' rel='ftnote'&gt; tag on your link. The 1 is a counting of 
-                    references, starting with 1 to N references. So down in your HTML document, put a div with
-                    "footnotes" class, an then an &lt;ol&gt; list. You can see the HTML code of this page,
-                    to understand.
-                </p>
+
                 <p class="text-right">
                     Read more <a href="http://www.sheldonled.com" target="_blank" >about Sheldon Led</a>.
                 </p>
